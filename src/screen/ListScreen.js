@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, FlatList, StyleSheet, SafeAreaView } from 'react-native';
 
-const ListScreen = () => {
+const ListScreen = (props) => {
     const classData = [
         { name: "Harry", reg: "083" },
         { name: "John", reg: "084" },
@@ -9,6 +9,9 @@ const ListScreen = () => {
         { name: "Roy", reg: "086" },
         { name: "Michael", reg: "087" }
     ];
+    // checking if data is passed successfully from buttonclick component to here.
+    console.warn(props.route.params);
+    const { name, age } = props.route.params;
     return (
         <SafeAreaView>
             <FlatList style={styles.list}
@@ -20,6 +23,8 @@ const ListScreen = () => {
             // horizontal
             // showsHorizontalScrollIndicator={false}
             />
+            <Text>Name :{name}</Text>
+            <Text>Age :{age}</Text>
         </SafeAreaView>
     )
 };
