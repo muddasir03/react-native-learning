@@ -15,8 +15,15 @@ const Buttonclick = ({ navigation }) => {
                 title="List Screen"
                 // Passing data from buttonclick to listScreen.
                 onPress={() => navigation.navigate("ListScreen", { name: name, age: age })} />
+
             <TouchableOpacity onPress={() => navigation.navigate("HomeScreen")} style={styles.opacity}>
                 <Text>Home Screen</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("ModelPressable")} style={styles.opacity}>
+                <Text>ModelPressable</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("Statusbar")} style={styles.opacity}>
+                <Text>Statusbar</Text>
             </TouchableOpacity>
             <Tab.Navigator>
                 <Tab.Screen name="Login" component={Login} />
@@ -40,10 +47,10 @@ const Signup = () => {
 };
 const styles = StyleSheet.create({
     opacity: {
-        backgroundColor: "red",
+        backgroundColor: "gray",
         color: "blue",
-        marginHorizontal: 155,
-    }
+        margin: 15,
+    },
 });
 
 export default Buttonclick;
