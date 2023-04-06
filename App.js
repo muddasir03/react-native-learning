@@ -4,6 +4,8 @@ import ListScreen from './src/screen/ListScreen';
 import HomeScreen from './src/screen/HomeScreen';
 import Buttonclick from './src/screen/Buttonclick';
 import ImageReuse from './src/screen/ImageReuse';
+import ModelPressable from './src/screen/ModalPressable';
+import Statusbar from './src/screen/Statusbar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -46,6 +48,8 @@ export default function App() {
             }} />
           <Stack.Screen name="ListScreen" component={ListScreen} />
           <Stack.Screen name="ImageReuse" component={ImageReuse} />
+          <Stack.Screen name="ModelPressable" component={ModelPressable} />
+          <Stack.Screen name="Statusbar" component={Statusbar} />
         </Stack.Navigator>
       </NavigationContainer>
 
